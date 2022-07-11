@@ -4,17 +4,20 @@ import java.util.TreeSet;
 
 class SmallestInfiniteSet {
 
-    private int []arr;
+    private TreeSet<Integer> set;
 
     public SmallestInfiniteSet() {
-        arr=new int[1000];
+        set=new TreeSet<>();
+        for(int i=1;i<=1000;i++)
+            set.add(i);
     }
 
     public int popSmallest() {
-
+       return (!set.isEmpty())?set.pollFirst():-1; // O(log(n))
     }
 
     public void addBack(int num) {
+        set.add(num);   // O(log(n))
     }
 }
 
