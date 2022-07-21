@@ -1,23 +1,24 @@
 package AdvDSA.Maths;
 
 public class ExactlyThreeDivisors {
-    // brute approach
+    // optimized approach
+    // idea is that a number which is prime will always have it sqr having
+    // 3 exactly div
     public int exactly3Divisors(int N)
     {
         if(N<=3)return 0;
         int count=0;
-        for(int i=4;i<=N;i++){
-            if(have3Divisors(i))
+        for(int i=2;i*i<=N;i++){
+            if(isPrime(i))
                 count++;
         }
         return count;
     }
 
-    private boolean have3Divisors(int i) {
-        int divCount=0;
-        for(int j=1;j<=i;j++)
+    private boolean isPrime(int i) {
+        for(int j=2;j*j<=i;j++)
             if(i%j==0)
-                divCount++;
-        return (divCount==3);
+               return false;
+        return true;
     }
 }
