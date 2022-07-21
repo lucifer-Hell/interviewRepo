@@ -8,9 +8,10 @@ public class ModularMultiplicativeInverse {
     {
         if(gcd(a,m)!=1)return -1;
         int j=1;
-        while(true){
+        while(j<=m){
             if((a*j)%m==1)return j;
             else j++;
         }
+        return -1;
     }
 }
