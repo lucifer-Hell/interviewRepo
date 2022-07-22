@@ -21,32 +21,12 @@ import basicDSA.Stack.LinkedListStack;
 import basicDSA.Stack.Stack;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Practice {
 
     public static void main(String[] args) {
-        Deque deque=new ArrayDeque(7);
-        int arr[]=new int []{1,2,3,4};
-        int arr2[]=new int[]{5,6,7,8};
-        System.out.println("empty deque case "+deque.getFront()+" "+deque.getRear());
-        deque.removeFront();
-        deque.removeRear();
-        for(int ele:arr)
-            deque.insertFront(ele);
-        for(int ele:arr2)
-            deque.insertRear(ele);
-        boolean isEven=true;
-        int count=16;
-        while(count-->0) {
-            if(isEven){
-                System.out.println("removing from front "+deque.getFront());
-                deque.removeFront();
-            }else {
-                System.out.println("removing from back " + deque.getRear());
-                deque.removeRear();
-            }
-            isEven=!isEven;
-        }
-
+        String[] alpha=new String[]{"64333639502","65953866768","17845691654","87148775908","58954177897","70439926174","48059986638","47548857440","18418180516","06364956881","01866627626","36824890579","14672385151","71207752868"};
+        System.out.println(Arrays.toString(alpha));
     }
 }
